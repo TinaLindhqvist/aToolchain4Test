@@ -56,4 +56,4 @@ services:
       dashboard_url: 'https://trello.com'
   #Availability Monitoring
   apm:
-    service_id: amp
+    service_id: apm
