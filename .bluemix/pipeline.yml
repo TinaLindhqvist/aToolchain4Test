@@ -4,10 +4,13 @@ stages:
   inputs:
   - type: git
     branch: master
-    service: ${SAMPLE_REPO}
+    service: ${REPO}
   triggers:
   - type: commit
   jobs:
   - name: Build
     type: builder
+    script: |
+      #!/bin/bash
+      echo -e "----------------------------------------------------------------------------------"
 
