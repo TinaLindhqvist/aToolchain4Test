@@ -3,7 +3,7 @@ template:
   name: "Toolchain Template to setup a Test App"
   description: "Toolchain template to setup Continuous Delivery and Test of an App"
   icon: toolchainIcon.png
-  image: toolchain.png
+  #image: toolchain.png
   info:
     git url: >-
       [https://github.com/TinaLindhqvist/minimal-toolchain](https://github.com/TinaLindhqvist/minimal-toolchain)
