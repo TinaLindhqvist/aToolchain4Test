@@ -43,10 +43,14 @@ services:
   #SauceLabs
   saucelabs:
     service_id: saucelabs
-  #OtherTool
-  othertool:
-    service_id: customtool  
-#Alert...
-#?:
-  #service_id:
-  
+  #Trello
+  othertool-Trello:
+    service_id: customtool
+    parameters:
+      name: 'Trello'
+      description: 'Test App To Do'
+      type: 'Home page'
+      lifecyclePhase: 'THINK'
+      imageUrl: 'http://atesttool.mybluemix.net/todoIcon_UItest.png'
+      documentationUrl: 'https://tech.trello.com/'
+      dashboard_url: 'https://trello.com'
