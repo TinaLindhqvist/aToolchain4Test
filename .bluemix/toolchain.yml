@@ -15,13 +15,14 @@ toolchain:
     getting_started: "A Toolchain for a Test App with multiple useful integrations. Enjoy!"
 services:
   #GitLab
-  sample-repo:
+  repo:
     service_id: hostedgit
     parameters:
       repo_name: '{{toolchain.name}}'
       repo_url: 'https://github.com/TinaLindhqvist/theTestAPP'
       type: clone
       has_issues: true
+      enable_traceability: true
   #Web IDE
   webide:
     service_id: orion
