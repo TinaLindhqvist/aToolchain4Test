@@ -1,0 +1,51 @@
+version: '2'
+template:
+  name: "Toolchain Template to setup a Test App"
+  description: "Toolchain template to setup Continuous Delivery and Test of an App"
+  icon: toolchainIcon.png
+  image: toolchain.png
+  info:
+    git url: >-
+      [https://github.com/TinaLindhqvist/minimal-toolchain](https://github.com/TinaLindhqvist/minimal-toolchain)
+    git branch: >-
+      [master](https://github.com/TinaLindhqvist/minimal-toolchain/tree/master)
+toolchain:
+  name: 'minToolchain-{{timestamp}}'
+  template:
+    getting_started: "A Minimal Toolchain with Git Labs and Web IDE integrations. Enjoy!"
+services:
+  #GitLab
+  sample-repo:
+    service_id: hostedgit
+    parameters:
+      repo_name: '{{toolchain.name}}'
+      repo_url: 'https://github.com/TinaLindhqvist/theTestAPP'
+      type: clone
+      has_issues: true
+  #Web IDE
+  webide:
+    service_id: orion
+  #Pipelines
+  build:
+    service_id: pipeline
+    parameters:
+      ui-pipeline: true
+      configuration: 
+       content: $file(pipeline.yml)
+       env:
+        REPO: "repo"
+       execute: true
+      services: ["repo"]  
+  #Slack
+  slack:
+    service_id: slack
+  #SauceLabs
+  saucelabs:
+    service_id: saucelabs
+  #OtherTool
+  othertool:
+    service_id: customtool  
+#Alert...
+#?:
+  #service_id:
+  
