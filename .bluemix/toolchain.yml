@@ -49,8 +49,11 @@ services:
     parameters:
       name: 'Trello'
       description: 'Test App To Do'
-      type: 'Home page'
+      type: 'Trello'
       lifecyclePhase: 'THINK'
       imageUrl: 'http://atesttool.mybluemix.net/todoIcon_UItest.png'
       documentationUrl: 'https://tech.trello.com/'
       dashboard_url: 'https://trello.com'
+  #Availability Monitoring
+  apm:
+    service_id: amp
