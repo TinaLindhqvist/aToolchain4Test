@@ -37,13 +37,13 @@ services:
       configuration:
         content:
           $text: pipeline.yml
-      env:
-        REPO: repo
- #       CF_APP_NAME: '{{form.pipeline.parameters.prod-app-name}}'
- #       PROD_SPACE_NAME: '{{form.pipeline.parameters.prod-space}}'
- #       PROD_ORG_NAME: '{{form.pipeline.parameters.prod-organization}}'
- #       PROD_REGION_ID: '{{form.pipeline.parameters.prod-region}}'
-      execute: true
+        env:
+          REPO: repo
+ #         CF_APP_NAME: '{{form.pipeline.parameters.prod-app-name}}'
+ #         PROD_SPACE_NAME: '{{form.pipeline.parameters.prod-space}}'
+ #         PROD_ORG_NAME: '{{form.pipeline.parameters.prod-organization}}'
+ #         PROD_REGION_ID: '{{form.pipeline.parameters.prod-region}}'
+        execute: true
   #Slack
   slack:
     service_id: slack
