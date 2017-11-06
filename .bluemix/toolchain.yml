@@ -57,7 +57,7 @@ services:
       description: 'Test App To Do'
       type: 'Trello'
       lifecyclePhase: 'THINK'
-      imageUrl: trello.png
+      #imageUrl: trello.png
       documentationUrl: 'https://tech.trello.com/'
       dashboard_url: 'https://trello.com/b/vYfDPh37/tcsetup'
   #Availability Monitoring
@@ -68,4 +68,4 @@ form:
     parameters:
       prod-app-name: '{{services.repo.parameters.repo_name}}'
     schema:
-      $ref: deploy.json
+      $file(deploy.json)
