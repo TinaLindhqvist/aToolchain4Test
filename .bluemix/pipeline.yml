@@ -27,7 +27,7 @@ stages:
   jobs:
   - name: Deploy
     type: deployer
-    target:
+    #target:
       #region_id: ${PROD_REGION_ID}
       #organization: ${PROD_ORG_NAME}
       #space: ${PROD_SPACE_NAME}
