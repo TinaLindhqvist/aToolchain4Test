@@ -35,8 +35,7 @@ services:
       name: '{{services.repo.parameters.repo_name}}'
       ui-pipeline: true
       configuration:
-        content:
-          $text: pipeline.yml
+        content: $file(pipeline.yml)
       env:
         REPO: repo
         CF_APP_NAME: '{{form.pipeline.parameters.prod-app-name}}'
