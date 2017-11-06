@@ -53,7 +53,7 @@ services:
       lifecyclePhase: 'THINK'
       imageUrl: 'http://atesttool.mybluemix.net/todoIcon_UItest.png'
       documentationUrl: 'https://tech.trello.com/'
-      dashboard_url: 'https://trello.com'
+      dashboard_url: 'https://trello.com/b/vYfDPh37/tcsetup'
   #Availability Monitoring
   apm:
     service_id: apm
