@@ -38,10 +38,10 @@ services:
         content: $file(pipeline.yml)
       env:
         REPO: repo
-        CF_APP_NAME: '{{form.pipeline.parameters.prod-app-name}}'
-        PROD_SPACE_NAME: '{{form.pipeline.parameters.prod-space}}'
-        PROD_ORG_NAME: '{{form.pipeline.parameters.prod-organization}}'
-        PROD_REGION_ID: '{{form.pipeline.parameters.prod-region}}'
+ #       CF_APP_NAME: '{{form.pipeline.parameters.prod-app-name}}'
+ #       PROD_SPACE_NAME: '{{form.pipeline.parameters.prod-space}}'
+ #       PROD_ORG_NAME: '{{form.pipeline.parameters.prod-organization}}'
+ #       PROD_REGION_ID: '{{form.pipeline.parameters.prod-region}}'
       execute: true
   #Slack
   slack:
@@ -63,9 +63,9 @@ services:
   #Availability Monitoring
   apm:
     service_id: apm
-form:
-  pipeline:
-    parameters:
-      prod-app-name: '{{services.repo.parameters.repo_name}}'
-    schema:
-      $file(deploy.json)
+#form:
+#  pipeline:
+#    parameters:
+#      prod-app-name: '{{services.repo.parameters.repo_name}}'
+#    schema:
+#      $ref: deploy.json
