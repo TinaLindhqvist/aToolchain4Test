@@ -64,9 +64,9 @@ services:
   #Availability Monitoring
   apm:
     service_id: apm
-#form:
-#  pipeline:
+form:
+  pipeline:
 #    parameters:
 #      prod-app-name: '{{services.repo.parameters.repo_name}}'
-#    schema:
-#      $ref: deploy.json
+    schema:
+      $ref: deploy.json
